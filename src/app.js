@@ -7,7 +7,7 @@ const weather = require('./weather/weather');
 
 const app = express()
 
-const port = 3000
+const port =  process.env.PORT ||  3000
 
 // Define path for Express config
 const publicPath = path.join(__dirname, '../public')
@@ -54,23 +54,11 @@ app.get('/weather', (req, res) => {
                 location:`${data.address}`,
                 precipitation:`${data.precipProbability}% change of rain.`
           })
-        // res.render('index.hbs', {
-        //     pageTitle:`Weather for ${req.query.address}`, 
-        //     welcomeMessage:`${data.summary}. It is currently ${data.temperature} degrees out and ${data.precipProbability}% change of rain.`,
-        //     currentYear:new Date().getFullYear(),
-        //     name:'Tanima Ranjan'
-        // })
       }).catch((error) => {
         res.send({
             welcomeMessage:`${error}`,
           })
-        // res.render('404.hbs', {
-        //     pageTitle:`Error Page`,
-        //     errorMessage:`${error}`, 
-        //     currentYear:new Date().getFullYear(),
-        //     name:'Tanima Ranjan'
-        // })
-        
+       
       })
    
 })
@@ -112,4 +100,5 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`))
+
+app.listen(port, () => console.log(`server is up on port ${port}`));

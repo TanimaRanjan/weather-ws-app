@@ -21,8 +21,8 @@ weatherForm.addEventListener('submit', (e) => {
 const data = async(addressCd) => {
     console.log('Location '+addressCd)
     
-  return await fetch(`http://localhost:3000/weather?address=${addressCd}`).then((Response) => {
-//    console.table(Response.status)
+  return await fetch(`/weather?address=${addressCd}`).then((Response) => {
+
     if(Response.status === 200 ) {
         return  Response.json()
       } else {
