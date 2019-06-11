@@ -11,7 +11,7 @@ const errorMessage = document.querySelector('#error_id')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     location_id.textContent = ''
-    forcast.textContent = ''
+    forcast.textContent = 'Loading...'
     errorMessage.textContent = ''
     data(document.querySelector('input').value)  
 })
