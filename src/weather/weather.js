@@ -33,8 +33,8 @@ const getWeatherAsync = async(lat, lng) => {
   }).then((data) => {
     // console.log('In Weather Async --- return '+JSON.parse(data))
     const currentTemp = {
-      timezone: data.timezone,
-        temperature: data.currently.temperature,
+            timezone: data.timezone,
+            temperature: data.currently.temperature,
             summary: data.currently.summary,
             apparentTemperature: data.currently.apparentTemperature,
             windSpeed: data.currently.windSpeed,
