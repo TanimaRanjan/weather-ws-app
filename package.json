@@ -14,5 +14,8 @@
     "hbs": "^4.0.4",
     "node-fetch": "^2.6.0",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
