@@ -50,7 +50,7 @@ app.get('/weather', (req, res) => {
       
       getGeoCode().then((data) => {  
           res.send({
-                welcomeMessage:`${data.summary}. It is currently ${data.temperature} degrees out and ${data.precipProbability}% change of rain.`,
+                welcomeMessage:`${data.summary}. It is currently ${data.temperature} F out and ${data.precipProbability}% change of rain.`,
                 location:`${data.address}`,
                 precipitation:`${data.precipProbability}% change of rain.`
           })
